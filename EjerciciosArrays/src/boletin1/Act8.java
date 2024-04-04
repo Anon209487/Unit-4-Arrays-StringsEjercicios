@@ -19,7 +19,7 @@ public class Act8 {
 		int[] enteros = new int[99];
 		int numerobuscar;
 		for (int i = 0; i < enteros.length; i++) {
-			enteros[i] = (int) (Math.floor(Math.random() * (1 - 100 + 1)));
+			enteros[i] = (int) (Math.floor(Math.random() * (1 + 100 + 0)));
 			System.out.println(false);
 		}
 		System.out.println("introduce numero:");
