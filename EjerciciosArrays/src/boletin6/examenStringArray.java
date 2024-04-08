@@ -18,38 +18,32 @@ public class examenStringArray {
 		ExamenSatrinArrayfunciones.desordenaAbecedario();
 		ExamenSatrinArrayfunciones.eligeFrase();
 		ExamenSatrinArrayfunciones.codificaFrase();
-		/**
-		 * 
-		 * for (int i = 0; i < ExamenSatrinArrayfunciones.abeceario.length; ++i) { for
-		 * (int j = 0; j < ExamenSatrinArrayfunciones.abeceario[i].length; ++j) {
-		 * System.out.println(ExamenSatrinArrayfunciones.abeceario[i][j]); } }
-		 */
-
-		// System.out.println(ExamenSatrinArrayfunciones.fraseReal);
-		// System.out.println(ExamenSatrinArrayfunciones.fraseCodificada);
+		System.out.println("La resl es: " + ExamenSatrinArrayfunciones.fraseReal);
+		System.out.println("La codificada es: " + ExamenSatrinArrayfunciones.fraseCodificada);
 		boolean iguales = false;
 		while (iguales == false) {
-			System.out.println("OPCIONES:");
+
 			examenStringArray.compruebaCodigo();
 			iguales = ExamenSatrinArrayfunciones.sonIguales();
 		}
-		System.out.println("La frase era " + ExamenSatrinArrayfunciones.fraseReal);
+		System.out.println("La frase era: " + ExamenSatrinArrayfunciones.fraseReal);
 	}
 
 	private static void compruebaCodigo() {
 		// TODO Auto-generated method stub
 		String letras;
-		int coidgo;
-
-		System.out.println("letra");
+		String coidgo;
+		System.out.println("INTODUZCA LETRA Y CODIGO:");
+		System.out.println("-----------------------------");
+		System.out.println("letra:");
 		letras = extracted().next();
-		System.out.println("coidgo");
-		coidgo = extracted().nextInt();
+		System.out.println("coidgo dos digitos:");
+		coidgo = extracted().nextLine();
 		char letra = letras.charAt(0);
 		System.out.println(letra);
 		ExamenSatrinArrayfunciones.compruebaCodigo(coidgo, letra);
-		System.out.println("ha acertado? " + ExamenSatrinArrayfunciones.compruebaCodigo(coidgo, letra));
-		System.out.println("La frase es " + ExamenSatrinArrayfunciones.fraseCodificada);
+
+		System.out.println("La frase es:" + ExamenSatrinArrayfunciones.fraseCodificada);
 	}
 
 	private static Scanner extracted() {

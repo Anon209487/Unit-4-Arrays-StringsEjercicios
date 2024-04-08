@@ -40,23 +40,54 @@ public class ExamenSatrinArrayfunciones {
 	}
 
 	public static void codificaFrase() {
-		// TODO Auto-generated method stub
-		String fraseRealSinEspacios = fraseReal.replace(" ", "");
-		char[] letras = fraseRealSinEspacios.toCharArray();
-		for (int i = 0; i < letras.length; i++) {
-			fraseCodificada = "*" + " " + fraseCodificada;
+		String fraseRealtemporal = fraseReal.replace(" ", "");
+		char[] letrasFraseReal = fraseRealtemporal.toCharArray();
+		int contador = 0;
+
+		String tabla = "";
+		String columna = "";
+		String codigo = "";
+		fraseCodificada = "";
+		while (contador < letrasFraseReal.length) {
+			for (int i = 0; i < abeceario.length; i++) {
+				for (int j = 0; j < 2; j++) {
+					if (letrasFraseReal[contador] == abeceario[i][j]) {
+						columna = String.valueOf(i);
+						tabla = String.valueOf(j);
+						codigo = (tabla + columna);
+
+					}
+				}
+			}
+
+			fraseCodificada = fraseCodificada + " " + codigo;
+			contador++;
 		}
+
 	}
 
-	public static boolean compruebaCodigo(int codigo, char letra) {
+	public static void compruebaCodigo(String codigo, char letrachar) {
 
-		return false;
+		String columna;
+		String tabla;
+		String letra = "";
+		for (int i = 0; i < abeceario.length; i++) {
+			for (int j = 0; j < 2; j++) {
+				if (letrachar == abeceario[i][j]) {
+					columna = String.valueOf(i);
+					tabla = String.valueOf(j);
+					letra = String.valueOf(letrachar);
+					fraseCodificada = fraseCodificada.replace(columna + tabla, letra);
+
+				}
+			}
+
+		}
+
 	}
 
 	public static boolean sonIguales() {
 		boolean sonIguales = false;
-		// fraseReal = "el dinero no puede comprar la vida";
-		// fraseCodificada = "e l d i n e r o n o p u e d e c o m p r a r l a v i d a";
 		String fraseRealtemporal = fraseReal.replace(" ", "");
 		String fraseCodificadaltemporal = fraseCodificada.replace(" ", "");
 		if (fraseRealtemporal.equalsIgnoreCase(fraseCodificadaltemporal)) {
