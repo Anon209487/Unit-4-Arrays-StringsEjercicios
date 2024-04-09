@@ -82,6 +82,22 @@ public class ExamenString {
 
 	public static void compruebaLetra(String letra) {
 		// TODO Auto-generated method stub
+		char letraclave = letra.charAt(0);
+		String fraseRealtemporal = palabraSecreta.replace(" ", "");
+		String fraseCodificadaltemporal = palabraPista.replace(" ", "");
+		char[] letras = fraseRealtemporal.toCharArray();
+		char[] letraspintaPista = fraseCodificadaltemporal.toCharArray();
+
+		for (int i = 0; i < letraspintaPista.length; i++) {
+			if (letras[i] == letraclave) {
+				letraspintaPista[i] = letras[i];
+			}
+
+		}
+		for (int i = 0; i < letraspintaPista.length; i++) {
+			fraseCodificadaltemporal = letraspintaPista[i] + " " + fraseCodificadaltemporal;
+		}
+		System.out.println(fraseCodificadaltemporal);
 	}
 
 	public static void compruebaPalabra(String palabra) {

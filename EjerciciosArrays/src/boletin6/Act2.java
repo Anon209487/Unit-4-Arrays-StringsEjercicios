@@ -3,7 +3,6 @@
  */
 package boletin6;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -15,7 +14,6 @@ public class Act2 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		// TODO Auto-generated method stub
 		String frase1 = "caca";
 		String frase2 = "";
@@ -30,7 +28,7 @@ public class Act2 {
 		while (frase1.compareToIgnoreCase(frase2) != 0) {
 
 			System.out.println("introduzca contasenya");
-			frase2 = sc.nextLine();
+			frase2 = new Scanner(System.in).nextLine();
 
 			longitudfrase2 = frase2.length();
 			if (longitudfrase1 > longitudfrase2) {
@@ -50,7 +48,7 @@ public class Act2 {
 				}
 			}
 			for (int i = 0; i < frasecofigo.length; i++) {
-				System.out.print(	frasecofigo[i] + " ");
+				System.out.print(frasecofigo[i] + " ");
 			}
 
 		}
